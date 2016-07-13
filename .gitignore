@@ -1,2 +1,8 @@
+.env
 .idea
 *.pyc
+build
+*.db
+*.sqlite
+*.sqlite3
+settings_local.py
