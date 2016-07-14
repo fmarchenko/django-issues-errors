@@ -3,7 +3,7 @@
 Special python logging handler for send errors to bitbucket.org
 
 ### Version
-0.1.0
+0.1.1
 
 ### Installation
 
@@ -49,7 +49,7 @@ LOGGING = {
         'issues': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
-            'class': 'issues_errors.log.BitBucketIssuesHandler',
+            'class': 'issues_errors.log.BitBucketIssuesHandler', # or 'class': 'issues_errors.log.GitHubIssuesHandler' if use github.com issues
             'repository_user': 'owner_repository_user',
             'repository_name': 'repository_name',
             'user': 'username_for_create_issue',
@@ -80,7 +80,6 @@ LOGGING = {
 ### Todos
 
  - Write Tests
- - Add Handler for Github.com
 
 License
 ----

@@ -8,7 +8,7 @@ install_requires.extend(open(
 
 setup(
     name='django-issues-errors',
-    version='0.1.0',
+    version='0.1.1',
     description='Special python logging handler for send errors to bitbucket.org',
     long_description=open('README.md').read(),
     license='MIT License',

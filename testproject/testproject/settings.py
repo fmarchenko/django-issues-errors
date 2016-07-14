@@ -127,7 +127,17 @@ LOGGING = {
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
         },
-        'issues': {
+        'base_issues': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'issues_errors.log.BaseIssuesHandler'
+        },
+        'github': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'issues_errors.log.GitHubIssuesHandler',
+        },
+        'bitbucket': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'issues_errors.log.BitBucketIssuesHandler'
@@ -138,7 +148,7 @@ LOGGING = {
             'handlers': ['console'],
         },
         'django.request': {
-            'handlers': ['mail_admins', 'issues'],
+            'handlers': ['mail_admins', 'base_issues'],
             'level': 'ERROR',
             'propagate': False,
         },
